@@ -1,0 +1,874 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" type="text/css" href="jogo.css">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="description" content=" JOGO Pergunta & Resposta">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="apple-touch-icon" sizes="180x180"
+        href="https://jornaldoempreendedor.com.br/wp-content/uploads/2014/04/perguntas.jpg">
+    <link rel="icon" type="image/png" sizes="32x32"
+        href="https://jornaldoempreendedor.com.br/wp-content/uploads/2014/04/perguntas.jpg">
+    <link rel="icon" type="image/png" sizes="16x16"
+        href="https://jornaldoempreendedor.com.br/wp-content/uploads/2014/04/perguntas.jpg">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <title>Pergunta & Resposta</title>
+</head>
+<style>
+    body {
+        overflow-x: hidden;
+        background-image: url("Imagens/bg_fundo.jpg");
+    }
+
+    .container {
+        width: 100%;
+        height: 800px;
+    }
+
+    span {
+        color: white;
+    }
+
+    h1 {
+        color: white;
+        font-family: 'courier new', Courier, monospace;
+    }
+
+    h1::after {
+        content: '|';
+        opacity: 1;
+        margin-left: 5px;
+        display: inline-block;
+        animation: blink .7s infinite;
+    }
+
+    @keyframes blink {
+
+        0%,
+        100% {
+            opacity: 1;
+        }
+
+        50% {
+            opacity: 0;
+        }
+    }
+    #subirTopo {
+			text-decoration: none;
+			bottom: 30px;
+			right: 30px;
+			color: #fff;
+			text-align: center;
+			cursor: pointer;
+			padding: 15px;
+			font-size: 15px;
+			font-weight: bold;
+			text-transform: uppercase;
+			position: fixed;
+			border: 0;
+			font-family: sans-serif;
+			opacity: .8;
+		}
+
+		.img-topo {
+			width: 50px;
+			height: 50px;
+		}
+
+		#subirTopo:hover {
+			opacity: 1;
+		}
+</style>
+
+<body>
+
+    <div class="container">
+
+        <div class="alert alert-warning alert-dismissible fade show text-center" role="alert">
+            <strong>Olá Amigo(a)!</strong> Você tem 10 minutos pra resolver o simulado.. então Boa Sorte. <br>
+            <strong>Lembrando!!</strong> No final da prova você pode, <strong>Desistir</strong> Ou <strong>Imprimir sua prova</strong>
+            <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+          </div>
+        <div class="stars"></div>
+
+        <div class="title-princi">
+            <br>
+            <h1 class="text-center efeito" style="color: white;">Programação</h1><br><br><br><br>
+        </div>
+
+        <h1 class="text-center" style="color: white;" id="count-down-timer"></h1>
+
+        <div class="title">
+            <h1 class="text-sm-left ss" style="font-size: 20px;">1. Na linguagem PHP, $_REQUEST se refere a um array
+                associativo.</h1><br>
+        </div>
+
+        <form class="pergunta">
+            <div class="resposta">
+                <input type="radio" name="pergunta1" value="incorreta" required />
+                <span style="color: white;">
+                    A) contendo variáveis de sessão disponíveis para o atual script.</span>
+
+                <br /><br>
+            </div>
+            <div class="resposta">
+                <input type="radio" name="pergunta1" value="incorreta" />
+                <span style="color: white;">B) de variáveis passadas para o script atual via método HTTP REQUEST.</span>
+
+                <br /><br>
+            </div>
+            <div class="resposta">
+                <input type="radio" name="pergunta1" value="correta" />
+                <span>C) que, por padrão, contém informações de $_GET, $_POST e $_COOKIE.</span>
+
+                <br /><br>
+            </div>
+
+            <div class="resposta">
+                <input type="radio" name="pergunta1" value="incorreta" />
+                <span>D) contendo referências para todas as variáveis que estão atualmente definidas no escopo global do
+                    script.</span>
+
+                <br /><br><br>
+            </div>
+        </form>
+
+        <div class="stars"></div>
+        <div class="title">
+            <h1 class="text-sm-left ss1" style="font-size: 20px;">
+                2. Analise os exemplos de criação de array em PHP.
+            </h1><br><br>
+            <h1 class="text-sm-left ss1" style="font-size: 20px;">
+                I. $idade = array("Paulo"=>32, "Pedro"=>30, "Ana"=>34);
+            </h1>
+            <h1 class="text-sm-left ss1" style="font-size: 20px;">
+                II. $familia = array("Jorge"=>array("Angela","Iracema", "Bia"),"Pedro"=>array("Ana"));
+            </h1>
+
+            <h1 class="text-sm-left ss1" style="font-size: 20px;">
+                III. $nome[0] ="Paulo"; $nome[1] ="Pedro"; $nome[2] ="Ana";
+            </h1>
+            <h1 class="text-sm-left ss1" style="font-size: 20px;">
+                IV. $idade['Paulo'] = "32"; $idade['Pedro'] = "30"; $idade['Ana'] = "34";
+            </h1><br>
+        </div><br>
+
+        <form class="pergunta">
+            <div class="resposta">
+                <input type="radio" name="pergunta1" value="incorreta" />
+                <span>A) III e IV, apenas.</span>
+
+                <br /><br>
+            </div>
+            <div class="resposta">
+                <input type="radio" name="pergunta1" value="correta" />
+                <span>B) I, II, III e IV.</span>
+
+                <br /><br>
+            </div>
+            <div class="resposta">
+                <input type="radio" name="pergunta1" value="incorreta" />
+                <span>C) I e II, apenas.</span>
+
+                <br /><br>
+            </div>
+            <div class="resposta">
+                <input type="radio" name="pergunta1" value="incorreta" />
+                <span>D) II, III e IV, apenas.</span>
+
+                <br /><br><br>
+            </div>
+        </form>
+
+        <div class="title">
+            <h1 class="text-sm-left ss2" style="font-size: 20px;">
+                3. Em Python, os métodos de lista permitem utilizar listas como pilhas, onde o item adicionado por
+                último é o primeiro a ser recuperado. Para adicionar um item ao topo da pilha, e para recuperar um item
+                do topo da pilha utilizam-se, respectivamente os métodos:</h1><br>
+        </div>
+
+        <form class="pergunta">
+            <div class="resposta">
+                <input type="radio" name="pergunta1" value="incorreta" />
+                <span>A) insert() e top().</span>
+
+                <br /><br>
+            </div>
+            <div class="resposta">
+                <input type="radio" name="pergunta1" value="incorreta" />
+                <span>B) add() e get().</span>
+
+                <br /><br>
+            </div>
+            <div class="resposta">
+                <input type="radio" name="pergunta1" id="ib" value="correta" />
+                <span>C) append() e pop().</span>
+
+                <br /><br>
+            </div>
+
+            <div class="resposta">
+                <input type="radio" name="pergunta1" value="incorreta" />
+                <span>D) addItem() e top().</span>
+
+                <br /><br><br>
+            </div>
+        </form>
+
+        <div class="title">
+            <h1 class="text-sm-left ss3 " style="font-size: 20px;">
+                4. Marcos está desenvolvendo uma aplicação web PHP utilizando o WAMPServer. Como está utilizando um
+                banco de dados MySQL, escolheu uma função para enviar uma consulta ou comando SQL (por exemplo, os
+                comandos select, insert ou delete) para o banco de dados ativo. A função correta escolhida foi:
+            </h1><br>
+        </div>
+
+        <form class="pergunta">
+            <div class="resposta">
+                <input type="radio" name="pergunta1" value="incorreta" />
+                <span>A) mysql_fetch_array.</span>
+
+                <br /><br>
+            </div>
+            <div class="resposta">
+                <input type="radio" name="pergunta1" value="incorreta" />
+                <span>B) mysql_update.
+                </span>
+
+                <br /><br>
+            </div>
+            <div class="resposta">
+                <input type="radio" name="pergunta1" value="incorreta" />
+                <span>C) mysql_execute_stmt.</span>
+
+                <br /><br>
+            </div>
+
+            <div class="resposta">
+                <input type="radio" name="pergunta1" value="correta" />
+                <span>D) mysql_query.</span>
+
+                <br /><br><br>
+            </div>
+        </form>
+
+        <div class="title">
+            <h1 class="text-sm-left ss4" style="font-size: 20px;">
+
+                5. Sobre orientação a objetos é correto afirmar:</h1>
+                <br>
+        </div>
+
+        <form class="pergunta">
+            <div class="resposta">
+                <input type="radio" name="pergunta1" value="incorreta" />
+                <span>A) Numa árvore genealógica de classes, a classe mais baixa herda os atributos e métodos somente da
+                    superclasse no nível imediatamente acima.</span>
+
+                <br /><br>
+            </div>
+            <div class="resposta">
+                <input type="radio" name="pergunta1" value="incorreta" />
+                <span>B) As variáveis de uma classe só podem ser alteradas por métodos definidos nos seus objetos</span>
+
+                <br /><br>
+            </div>
+            <div class="resposta">
+                <input type="radio" name="pergunta1" value="correta" />
+                <span>C) Na hierarquia de classes, se superclasse é uma generalização de subclasses, pode-se inferir que
+                    a subclasse é uma especialização de superclasse.</span>
+
+                <br /><br>
+            </div>
+
+            <div class="resposta">
+                <input type="radio" name="pergunta1" value="incorreta" />
+                <span>D) Os objetos de uma classe são idênticos no que se refere à sua interface e ao seu
+                    estado.</span>
+
+                <br /><br><br>
+            </div>
+        </form>
+
+
+        <div class="title">
+            <h1 class="text-sm-left ss5" style="font-size: 20px;">
+                6. Existem duas partes na compilação: a análise e a síntese. A parte de análise divide o programa fonte nas partes constituintes e cria uma representação intermediária do mesmo. Durante a análise, as operações implicadas pelo programa fonte são determinadas e registradas em uma estrutura denominada de
+            </h1><br>
+        </div>
+
+        <form class="pergunta">
+
+            <div class="resposta">
+                <input type="radio" name="pergunta1" value="correta" />
+                <span>A) árvore.</span>
+
+                <br /><br>
+            </div>
+
+            <div class="resposta">
+                <input type="radio" name="pergunta1" value="incorreta" />
+                <span>B) lista.</span>
+
+                <br /><br>
+            </div>
+            <div class="resposta">
+                <input type="radio" name="pergunta1" value="incorreta" />
+                <span>C) pilha.</span>
+
+                <br /><br>
+            </div>
+            <div class="resposta">
+                <input type="radio" name="pergunta1" value="incorreta" />
+                <span>D) hash.</span>
+
+                <br /><br><br>
+            </div>
+
+
+        </form>
+
+        <div class="title">
+            <h1 class="text-sm-left ss6" style="font-size: 20px;">
+
+                7. Com relação às linguagens de montagem é correto afirmar:
+            </h1><br>
+        </div>
+        <form class="pergunta">
+            <div class="resposta">
+                <input type="radio" name="pergunta1" value="incorreta" />
+                <span>A) Em dispositivos, como cartões inteligentes, notebooks e processadores embutidos em eletrodomésticos, a linguagem de montagem é a melhor alternativa devido à escassez de memória.</span>
+
+                <br /><br>
+            </div>
+            <div class="resposta">
+                <input type="radio" name="pergunta1" value="correta" />
+                <span>B) O programador de linguagem de montagem tem acesso a aspectos e instruções disponíveis na arquitetura alvo não disponíveis em linguagens de alto nível</span>
+
+                <br /><br>
+            </div>
+            <div class="resposta">
+                <input type="radio" name="pergunta1" value="incorreta" />
+                <span>C) Um programa em linguagem de montagem sempre pode ser executado em diversas arquiteturas, assim como um programa escrito em linguagem de alto nível</span>
+
+                <br /><br>
+            </div>
+
+            <div class="resposta">
+                <input type="radio" name="pergunta1" value="incorreta" />
+                <span>D) Uma linguagem de montagem pura é uma linguagem na qual cada declaração produz várias instruções de máquina. Em outras palavras, há uma correspondência um-para-muitos entre instruções de máquina e declarações no programa de montagem.</span><br>
+
+                <br /><br><br>
+            </div>
+        </form>
+
+        <div class="title">
+            <h1 class="text-sm-left ss7" style="font-size: 20px;">
+                8. Uma Linguagem de Programação (LP) é um método padronizado para expressar instruções para um computador. Um paradigma é um conjunto de características que serve para categorizar um grupo de linguagens de programação. Considerando este tema, é correto afirmar que:
+            </h1><br>
+        </div>
+        <form class="pergunta">
+            <div class="resposta">
+                <input type="radio" name="pergunta1" value="incorreta" />
+                <span>A) Todo programa escrito em uma LP deve ser traduzido para a linguagem de montagem para ser executado. Isso é realizado através de um programa ou conjunto de programas. Esse programa tradutor ou assembly recebe como entrada o código fonte e gera o código de montagem.
+
+                </span><br>
+
+                <br />
+            </div>
+
+            <div class="resposta">
+                <input type="radio" name="pergunta1" value="incorreta" />
+                <span>B) No processo de interpretação, a instrução é traduzida para HTML e executada no momento da execução do programa. As vantagens são que apenas partes do programa podem ser executadas e o processo é mais rápido em relação ao processo de compilação.</span>
+
+                <br /><br>
+            </div>
+            <div class="resposta">
+                <input type="radio" name="pergunta1" value="correta" />
+                <span>C) O processo híbrido combina a execução eficiente e a portabilidade de programas. A base é a existência de um código intermediário, mais fácil de ser interpretado e não específico de uma plataforma computacional. O método é dividido em duas etapas: compilação para um código intermediário e interpretação desse código. Um exemplo é a linguagem Java que utiliza a JVM.</span>
+
+                <br /><br>
+            </div>
+            <div class="resposta">
+                <input type="radio" name="pergunta1" value="incorreta" />
+                <span>D) No paradigma declarativo os programas são especificações de como são as tarefas a serem realizadas. Os programas são especificações de relações e funções. Não existem atribuições a variáveis. As variáveis são incógnitas e não representam posições de memória. O C é uma LP que pertence a este paradigma</span>
+
+                <br /><br><br>
+            </div>
+        </form>
+
+        <div class="title">
+            <h1 class="text-sm-left ss8" style="font-size: 20px;">
+                9. Em relação à linguagem de programação Python, é INCORRETO afirmar que: 
+            </h1><br>
+        </div>
+        <form class="pergunta">
+            <div class="resposta">
+                <input type="radio" name="pergunta1" value="incorreta" />
+                <span>A) O tipo da variável pode ser inferido pelo interpretador em tempo de execução</span>
+
+                <br /><br>
+            </div>
+            <div class="resposta">
+                <input type="radio" name="pergunta1" value="incorreta" />
+                <span>B) É necessário converter explicitamente o tipo da variável antes de uma operação entre tipos não compatíveis.</span>
+
+                <br /><br>
+            </div>
+            <div class="resposta">
+                <input type="radio" name="pergunta1" value="incorreta" />
+                <span>C) É uma linguagem orientada a objeto na qual os atributos e os métodos podem ser acessados usando o ponto (.).  </span>
+
+                <br /><br>
+            </div>
+
+            <div class="resposta">
+                <input type="radio" name="pergunta1" value="correta" />
+                <span>D) Os blocos de código são delimitados pelo uso das chaves: { e } para início e fim do bloco, respectivamente.</span>
+
+                <br /><br><br>
+            </div>
+        </form>
+
+        <div class="title">
+            <h1 class="text-sm-left ss9" style="font-size: 20px;">
+                10. No contexto da jQuery, o código          $(document).ready(){          .....          }) previne que as funções jQuery sejam executadas antes da carga total da página. A primeira linha desse script pode ser substituída por um método mais abreviado:
+
+            </h1><br>
+        </div>
+        <form class="pergunta">
+            <div class="resposta">
+                <input type="radio" name="pergunta1" value="incorreta" />
+                <span>A) $(begin{</span>
+
+                <br /><br>
+            </div>
+            <div class="resposta">
+                <input type="radio" name="pergunta1" value="correta" />
+                <span>B) $(function(){</span>
+
+                <br /><br>
+            </div>
+            <div class="resposta">
+                <input type="radio" name="pergunta1" value="incorreta" />
+                <span>C) $(go(){</span>
+
+                <br /><br>
+            </div>
+
+
+            <div class="resposta">
+                <input type="radio" name="pergunta1" value="incorreta" />
+                <span>D) $(main{</span>
+
+                <br /><br><br>
+            </div>
+        </form>
+
+
+        <div class="title">
+            <h1 class="text-sm-left ss10" style="font-size: 20px;">
+                11. Analise o código Python 2.7 a seguir. def xpto (n1, n2):      while n1 != n2:          if (n1 < n2):              n2 = n2 - n1          else:                  n1 = n1 - n2         return n1 print xpto(50,5) O valor exibido pelo comando print é
+                <br><br>
+
+        </div>
+        <form class="pergunta">
+            <div class="resposta">
+                <input type="radio" name="pergunta1" value="incorreta" />
+                <span>A) 0</span>
+
+                <br /><br>
+            </div>
+            <div class="resposta">
+                <input type="radio" name="pergunta1" value="incorreta" />
+                <span>B) 1</span>
+
+                <br /><br>
+            </div>
+            <div class="resposta">
+                <input type="radio" name="pergunta1" value="correta" />
+                <span>C) 5</span>
+
+                <br><br>
+            </div>
+
+            <div class="resposta">
+                <input type="radio" name="pergunta1" value="incorreta" />
+                <span>D) 50</span>
+
+                <br /><br><br>
+            </div>
+        </form>
+
+        <div class="title">
+            <h1 class="text-sm-left ss11" style="font-size: 20px;">
+                12. Considere o seguinte trecho de código Java. public class Main {      public static void main(String[] args) {          int time = 20;          if (time < 18) {              System.out.println("Bom dia.");          } else {              System.out.println("Boa noite.");          }     } } Assinale o trecho que substitui corretamente a estrutura do comando if. 
+            </h1>    <br>
+        </div>
+        <form class="pergunta">
+            <div class="resposta">
+                <input type="radio" name="pergunta1" value="correta" />
+                <span>A) System.out.println  ((time < 18) ? "Bom dia." : "Boa noite.");</span>
+
+                <br />    <br>
+            </div>
+            <div class="resposta">
+                <input type="radio" name="pergunta1" value="incorreta" />
+                <span>B) System.out.println  (time < 18 ? "Bom dia." : "Boa noite.");</span>
+
+                <br />    <br>
+            </div>
+            <div class="resposta">
+                <input type="radio" name="pergunta1" value="incorreta" />
+                <span>C) System.out.println  ((time < 18) ; "Bom dia." ; "Boa noite.");</span>
+
+                <br>    <br>
+            </div>
+
+            <div class="resposta">
+                <input type="radio" name="pergunta1" value="incorreta" />
+                <span>D) System.out.println  ((time < 18) : "Bom dia." : "Boa noite.");</span>
+
+                <br /><br><br>
+            </div>
+        </form>
+
+        <div class="title">
+            <h1 class="text-sm-left ss12" style="font-size: 20px;">
+                13. Assinale o código C# que está corretamente construído para produzir o termo “Ford” na saída. 
+            </h1><br>
+        </div>
+        <form class="pergunta">
+
+            <div class="resposta">
+                <input type="radio" name="pergunta1" value="correta" />
+                <span>A) using System; namespace MyApplication { class Program      { static void Main(string[] args)          { string[] carros = {"Audi", "Ford", "Mini"};              Console.WriteLine(carros[1]);          }}}</span>
+
+                <br><br>
+            </div>
+
+            <div class="resposta">
+                <input type="radio" name="pergunta1" value="incorreta" />
+                <span>B) using System; namespace MyApplication { class Program      { static void Main(string() args)          { string() carros = {"Audi", "Ford", "Mini"};              Console.WriteLine(carros[2]);           }}} </span>
+
+                <br /><br>
+            </div>
+            <div class="resposta">
+                <input type="radio" name="pergunta1" value="incorreta" />
+                <span>C) using System; { class Program      { static void Main(string[] args)          { string[] carros = ["Audi", "Ford", "Mini"];              Console.WriteLine(carros[1]);           }}} </span>
+
+                <br /><br>
+            </div>
+
+            <div class="resposta">
+                <input type="radio" name="pergunta1" value="incorreta" />
+                <span>D) using System; namespace MyApplication { class Program      { static void Main(string[] args)          { string[] carros = ("Audi", "Ford", "Mini");              Console.WriteLine(carros[1]);          }}} </span>
+
+                <br /><br><br>
+            </div>
+        </form>
+
+        <div class="title">
+            <h1 class="text-sm-left ss13" style="font-size: 20px;">
+                14. Considere o código JavaScript exibido a seguir.         str = "Banana Laranja Morango";         alert(str.split(" ")[1]); Assinale o que é exibido quando esse trecho é executado. 
+            </h1><br>
+        </div>
+        <form class="pergunta">
+            <div class="resposta">
+                <input type="radio" name="pergunta1" value="correta" />
+                <span>A) Laranja</span>
+
+                <br /><br>
+            </div>
+            <div class="resposta">
+                <input type="radio" name="pergunta1" value="incorreta" />
+                <span>B) Erro na compilação</span>
+
+                <br /><br>
+            </div>
+            <div class="resposta">
+                <input type="radio" name="pergunta1" value="incorreta" />
+                <span>C) Banana Laranja Morango</span>
+
+                <br><br>
+            </div>
+
+            <div class="resposta">
+                <input type="radio" name="pergunta1" value="incorreta" />
+                <span>D) Banana</span>
+
+                <br /><br><br>
+            </div>
+        </form>
+
+        <div class="title">
+            <h1 class="text-sm-left ss14" style="font-size: 20px;">
+                15. A alternativa que contém apenas operadores válidos na linguagem Java é
+            </h1><br>
+        </div>
+        <form class="pergunta">
+            <div class="resposta">
+                <input type="radio" name="pergunta1" value="incorreta" />
+                <span>A) +, ==, <> e %.</span>
+
+                <br /><br>
+            </div>
+            <div class="resposta">
+                <input type="radio" name="pergunta1" value="incorreta" />
+                <span>B) -, :=, != e /.</span>
+
+                <br /><br>
+            </div>
+            <div class="resposta">
+                <input type="radio" name="pergunta1" value="correta" />
+                <span>C) /, !=, >= e *.</span>
+
+                <br><br>
+            </div>
+
+            <div class="resposta">
+                <input type="radio" name="pergunta1" value="incorreta" />
+                <span>D) %, >=, ~= e +.</span>
+
+                <br /><br><br>
+            </div>
+        </form>
+
+        <div class="title">
+            <h1 class="text-sm-left ss15" style="font-size: 20px;">
+                16. A forma correta de se declarar uma constante na linguagem PHP é:
+            </h1><br>
+        </div>
+        <form class="pergunta">
+            <div class="resposta">
+                <input type="radio" name="pergunta1" value="incorreta" />
+                <span>A)  constant "XPTO" = "alguma coisa"; </span>
+
+                <br /><br>
+            </div>
+            <div class="resposta">
+                <input type="radio" name="pergunta1" value="incorreta" />
+                <span>B)constant $XPTO = "alguma coisa"; </span>
+
+                <br /><br>
+            </div>
+
+            <div class="resposta">
+                <input type="radio" name="pergunta1" value="incorreta" />
+                <span>C) declare("XPTO","alguma coisa"); </span>
+
+                <br /><br>
+
+                <div class="resposta">
+                    <input type="radio" name="pergunta1" value="correta" />
+                    <span>D) define("XPTO","alguma coisa"); </span>
+
+                    <br><br><br>
+                </div>
+            </div>
+        </form>
+
+        <div class="title">
+            <h1 class="text-sm-left ss16" style="font-size: 20px;">
+                17. Considerando as funções do PHP para manipulação de documentos em PDF, uma delas “preenche o caminho atual e o desenha no documento”. Trata-se de:
+            </h1><br>
+        </div>
+        <form class="pergunta">
+            <div class="resposta">
+                <input type="radio" name="pergunta1" value="incorreta" />
+                <span>A) pdf_fill</span>
+
+                <br /><br>
+            </div>
+            <div class="resposta">
+                <input type="radio" name="pergunta1" value="incorreta" />
+                <span>B) pdf_stroke</span>
+
+                <br /><br>
+            </div>
+            <div class="resposta">
+                <input type="radio" name="pergunta1" value="correta" />
+                <span>C) pdf_fill_stroke</span>
+
+                <br><br>
+            </div>
+
+            <div class="resposta">
+                <input type="radio" name="pergunta1" value="incorreta" />
+                <span>D) pdf_fill_textblock</span>
+
+                <br /><br><br>
+            </div>
+        </form>
+
+        <div class="title">
+            <h1 class="text-sm-left ss17" style="font-size: 20px;">
+                18. No contexto de páginas Web e JavaScript, o comando que escreve “Atenção!” num elemento HTML cujo id é “obj55” é:
+            </h1><br>
+        </div>
+        <form class="pergunta">
+            <div class="resposta">
+                <input type="radio" name="pergunta1" value="incorreta" />
+                <span>A) document.Id("obj55").innerHTML = "Atenção!";</span>
+
+                <br /><br>
+            </div>
+            <div class="resposta">
+                <input type="radio" name="pergunta1" value="correta" />
+                <span>B) document.getElementById("obj55").Text = "Atenção!";</span>
+
+                <br><br>
+            </div>
+
+            <div class="resposta">
+                <input type="radio" name="pergunta1" value="incorreta" />
+                <span>C) document.getHTMLObject("obj55").innerHTML = "Atenção!".</span>
+
+                <br /><br>
+            </div>
+
+            <div class="resposta">
+                <input type="radio" name="pergunta1" value="incorreta" />
+                <span>D) 
+                    HTML.Id("obj55").display = "Atenção!";</span>
+
+                <br /><br><br>
+            </div>
+        </form>
+
+        <div class="title">
+            <h1 class="text-sm-left ss18" style="font-size: 20px;">
+                19. O que imprime o seguinte comando? <strong>print(18/4, 18//4, 18%4)</strong>
+            </h1><br>
+        </div>
+        <form class="pergunta">
+            <div class="resposta">
+                <input type="radio" name="pergunta1" value="incorreta" />
+                <span>A) 4 4.5 2
+                </span>
+
+                <br /><br>
+            </div>
+            <div class="resposta">
+                <input type="radio" name="pergunta1" value="incorreta" />
+                <span>B) 4 4 4.5
+                </span>
+
+                <br /><br>
+            </div>
+
+
+            <div class="resposta">
+                <input type="radio" name="pergunta1" value="incorreta" />
+                <span>C) 4.4 4.25 2</span>
+
+                <br /><br>
+            </div>
+
+            <div class="resposta">
+                <input type="radio" name="pergunta1" value="correta" />
+                <span>D) . 4.5 4 2
+                </span>
+
+                <br><br><br>
+            </div>
+        </form>
+
+        <div class="title">
+            <h1 class="text-sm-left ss19" style="font-size: 20px;">
+                20. O que é impresso pelo trecho de código a seguir?
+            </h1><br><br>
+
+            <h1 class="text-sm-left ss19" style="font-size: 20px;">
+                uma_lista = [3, 67, "gato", [56, 57, "gato"], [ ], 3.14, False]
+                print(3.14 in uma_lista, end=" ")
+                print(57 in uma_lista)
+            </h1><br>
+        </div>
+        <form class="pergunta">
+            <div class="resposta">
+
+                <input type="radio" name="pergunta1" value="correta" />
+                <span>A) True False.</span>
+                <br /><br>
+            </div>
+            <div class="resposta">
+                <input type="radio" name="pergunta1" value="incorreta" />
+                <span>B) False False
+                    .</span><br>
+
+                <br />
+            </div>
+            <div class="resposta">
+                <input type="radio" name="pergunta1" value="incorreta" />
+                <span>C) False True</span>
+
+                <br><br>
+            </div>
+
+            <div class="resposta">
+                <input type="radio" name="pergunta1" value="incorreta" required />
+                <span>D) True True
+                </span>
+
+                <br /><br> <br /><br> <br /><br>
+            </div>
+        </form>
+        <a id="subirTopo">
+            <img class="img-topo" src="https://www.primeprevidencia.com.br/wa_images/seta-branca-cima.gif?v=1g7r4fu">
+            
+        </a>
+         
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.10.1/jquery.min.js"></script>
+	<script type="text/javascript">
+        
+		jQuery(document).ready(function() {
+
+			jQuery("#subirTopo").hide();
+
+			jQuery('a#subirTopo').click(function() {
+				jQuery('body,html').animate({
+					scrollTop: 0
+				}, 800);
+				return false;
+			});
+
+			jQuery(window).scroll(function() {
+				if (jQuery(this).scrollTop() > 1000) {
+					jQuery('#subirTopo').fadeIn();
+				} else {
+					jQuery('#subirTopo').fadeOut();
+				}
+			});
+		});
+	</script>
+        <div class="form-row text-center">
+            <div class="col-12">
+                <a href="index.html"><button type="submit"  class="btn btn-danger" onclick="desistir()">DESISTIR</button></a>
+                <button type="submit" class="btn btn-danger">ENVIAR</button>
+                <button type="submit" class="btn btn-danger" value="Imprimir" onclick="window.print()">IMPRIMIR PROVA</button>
+                <br><br>
+            </div>
+        </div>
+
+     
+
+        <script src="jogo.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"
+            integrity="sha384-IQsoLXl5PILFhosVNubq5LC7Qb9DXgDA9i+tQ8Zj3iwWAwPtgFTxbJ8NT4GN1R8p"
+            crossorigin="anonymous"></script>
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.min.js"
+            integrity="sha384-cVKIPhGWiC2Al4u+LWgxfKTRIcfu0JTxR+EQDz/bgldoEyl4H0zUF0QKbrJ0EcQF"
+            crossorigin="anonymous"></script>
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+            integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+            crossorigin="anonymous"></script>
+        <script src="estilo-letra.js"></script>
+
+    </div>
+</body>
+
+</html>

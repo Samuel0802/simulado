@@ -1,0 +1,798 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" type="text/css" href="jogo.css">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="description" content=" JOGO Pergunta & Resposta">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="apple-touch-icon" sizes="180x180"
+        href="https://jornaldoempreendedor.com.br/wp-content/uploads/2014/04/perguntas.jpg">
+    <link rel="icon" type="image/png" sizes="32x32"
+        href="https://jornaldoempreendedor.com.br/wp-content/uploads/2014/04/perguntas.jpg">
+    <link rel="icon" type="image/png" sizes="16x16"
+        href="https://jornaldoempreendedor.com.br/wp-content/uploads/2014/04/perguntas.jpg">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <title>Pergunta & Resposta</title>
+</head>
+<style>
+    body {
+        overflow-x: hidden;
+        background-image: url("Imagens/bg_fundo.jpg");
+    }
+
+    .container {
+        width: 100%;
+        height: 800px;
+    }
+
+    span {
+        color: white;
+    }
+
+    h1 {
+        color: white;
+        font-family: 'courier new', Courier, monospace;
+    }
+
+    h1::after {
+        content: '|';
+        opacity: 1;
+        margin-left: 5px;
+        display: inline-block;
+        animation: blink .7s infinite;
+    }
+
+    @keyframes blink {
+
+        0%,
+        100% {
+            opacity: 1;
+        }
+
+        50% {
+            opacity: 0;
+        }
+    }
+</style>
+
+<body>
+
+    <div class="container">
+
+        <div class="alert alert-warning alert-dismissible fade show text-center" role="alert">
+            <strong>Olá Amigo(a)!</strong> Você tem 10 minutos pra resolver o simulado.. então Boa Sorte. <br>
+            <strong>Lembrando!!</strong> No final da prova você pode, <strong>Desistir</strong> Ou <strong>Imprimir sua prova</strong>
+            <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+          </div>
+        <div class="stars"></div>
+
+        <div class="title-princi">
+            <br>
+            <h1 class="text-center efeito" style="color: white;">Segurança Cibernética</h1><br><br><br><br>
+        </div>
+
+        <h1 class="text-center" style="color: white;" id="count-down-timer"></h1>
+
+        <div class="title">
+            <h1 class="text-sm-left ss" style="font-size: 20px;">1. </h1><br>
+        </div>
+
+        <form class="pergunta">
+            <div class="resposta">
+                <input type="radio" name="pergunta1" value="incorreta" required />
+                <span style="color: white;">
+                    A) </span>
+
+                <br /><br>
+            </div>
+            <div class="resposta">
+                <input type="radio" name="pergunta1" value="incorreta" />
+                <span style="color: white;">B) </span>
+
+                <br /><br>
+            </div>
+            <div class="resposta">
+                <input type="radio" name="pergunta1" value="correta" />
+                <span>C) </span>
+
+                <br /><br>
+            </div>
+
+            <div class="resposta">
+                <input type="radio" name="pergunta1" value="incorreta" />
+                <span>D) </span>
+
+                <br /><br><br>
+            </div>
+        </form>
+
+        <div class="stars"></div>
+        <div class="title">
+            <h1 class="text-sm-left ss1" style="font-size: 20px;">
+                2. 
+            </h1><br><br>
+          
+        </div>
+
+        <form class="pergunta">
+            <div class="resposta">
+                <input type="radio" name="pergunta1" value="incorreta" />
+                <span>A) </span>
+
+                <br /><br>
+            </div>
+            <div class="resposta">
+                <input type="radio" name="pergunta1" value="correta" />
+                <span>B) </span>
+
+                <br /><br>
+            </div>
+            <div class="resposta">
+                <input type="radio" name="pergunta1" value="incorreta" />
+                <span>C) </span>
+
+                <br /><br>
+            </div>
+            <div class="resposta">
+                <input type="radio" name="pergunta1" value="incorreta" />
+                <span>D) </span>
+
+                <br /><br><br>
+            </div>
+        </form>
+
+        <div class="title">
+            <h1 class="text-sm-left ss2" style="font-size: 20px;">
+                3. </h1><br>
+        </div>
+
+        <form class="pergunta">
+            <div class="resposta">
+                <input type="radio" name="pergunta1" value="incorreta" />
+                <span>A) </span>
+
+                <br /><br>
+            </div>
+            <div class="resposta">
+                <input type="radio" name="pergunta1" value="incorreta" />
+                <span>B) </span>
+
+                <br /><br>
+            </div>
+            <div class="resposta">
+                <input type="radio" name="pergunta1" id="ib" value="correta" />
+                <span>C) </span>
+
+                <br /><br>
+            </div>
+
+            <div class="resposta">
+                <input type="radio" name="pergunta1" value="incorreta" />
+                <span>D) </span>
+
+                <br /><br><br>
+            </div>
+        </form>
+
+        <div class="title">
+            <h1 class="text-sm-left ss3 " style="font-size: 20px;">
+                4. 
+            </h1><br>
+        </div>
+
+        <form class="pergunta">
+            <div class="resposta">
+                <input type="radio" name="pergunta1" value="incorreta" />
+                <span>A) </span>
+
+                <br /><br>
+            </div>
+            <div class="resposta">
+                <input type="radio" name="pergunta1" value="incorreta" />
+                <span>B)
+                </span>
+
+                <br /><br>
+            </div>
+            <div class="resposta">
+                <input type="radio" name="pergunta1" value="incorreta" />
+                <span>C) .</span>
+
+                <br /><br>
+            </div>
+
+            <div class="resposta">
+                <input type="radio" name="pergunta1" value="correta" />
+                <span>D) </span>
+
+                <br /><br><br>
+            </div>
+        </form>
+
+        <div class="title">
+            <h1 class="text-sm-left ss4" style="font-size: 20px;">
+
+                5. </h1>
+                <br>
+        </div>
+
+        <form class="pergunta">
+            <div class="resposta">
+                <input type="radio" name="pergunta1" value="incorreta" />
+                <span>A) </span>
+
+                <br /><br>
+            </div>
+            <div class="resposta">
+                <input type="radio" name="pergunta1" value="incorreta" />
+                <span>B) </span>
+
+                <br /><br>
+            </div>
+            <div class="resposta">
+                <input type="radio" name="pergunta1" value="correta" />
+                <span>C) </span>
+
+                <br /><br>
+            </div>
+
+            <div class="resposta">
+                <input type="radio" name="pergunta1" value="incorreta" />
+                <span>D) </span>
+
+                <br /><br><br>
+            </div>
+        </form>
+
+
+        <div class="title">
+            <h1 class="text-sm-left ss5" style="font-size: 20px;">
+                6. 
+            </h1><br>
+        </div>
+
+        <form class="pergunta">
+
+            <div class="resposta">
+                <input type="radio" name="pergunta1" value="correta" />
+                <span>A) </span>
+
+                <br /><br>
+            </div>
+
+            <div class="resposta">
+                <input type="radio" name="pergunta1" value="incorreta" />
+                <span>B) </span>
+
+                <br /><br>
+            </div>
+            <div class="resposta">
+                <input type="radio" name="pergunta1" value="incorreta" />
+                <span>C) </span>
+
+                <br /><br>
+            </div>
+            <div class="resposta">
+                <input type="radio" name="pergunta1" value="incorreta" />
+                <span>D) </span>
+
+                <br /><br><br>
+            </div>
+
+
+        </form>
+
+        <div class="title">
+            <h1 class="text-sm-left ss6" style="font-size: 20px;">
+
+                7. 
+            </h1><br>
+        </div>
+        <form class="pergunta">
+            <div class="resposta">
+                <input type="radio" name="pergunta1" value="incorreta" />
+                <span>A) </span>
+
+                <br /><br>
+            </div>
+            <div class="resposta">
+                <input type="radio" name="pergunta1" value="correta" />
+                <span>B) </span>
+
+                <br /><br>
+            </div>
+            <div class="resposta">
+                <input type="radio" name="pergunta1" value="incorreta" />
+                <span>C) </span>
+
+                <br /><br>
+            </div>
+
+            <div class="resposta">
+                <input type="radio" name="pergunta1" value="incorreta" />
+                <span>D) </span><br>
+
+                <br /><br><br>
+            </div>
+        </form>
+
+        <div class="title">
+            <h1 class="text-sm-left ss7" style="font-size: 20px;">
+                8.
+            </h1><br>
+        </div>
+        <form class="pergunta">
+            <div class="resposta">
+                <input type="radio" name="pergunta1" value="incorreta" />
+                <span>A) 
+
+                </span><br>
+
+                <br />
+            </div>
+
+            <div class="resposta">
+                <input type="radio" name="pergunta1" value="incorreta" />
+                <span>B) </span>
+
+                <br /><br>
+            </div>
+            <div class="resposta">
+                <input type="radio" name="pergunta1" value="correta" />
+                <span>C) </span>
+
+                <br /><br>
+            </div>
+            <div class="resposta">
+                <input type="radio" name="pergunta1" value="incorreta" />
+                <span>D) </span>
+
+                <br /><br><br>
+            </div>
+        </form>
+
+        <div class="title">
+            <h1 class="text-sm-left ss8" style="font-size: 20px;">
+                9. 
+            </h1><br>
+        </div>
+        <form class="pergunta">
+            <div class="resposta">
+                <input type="radio" name="pergunta1" value="incorreta" />
+                <span>A) </span>
+
+                <br /><br>
+            </div>
+            <div class="resposta">
+                <input type="radio" name="pergunta1" value="incorreta" />
+                <span>B)</span>
+
+                <br /><br>
+            </div>
+            <div class="resposta">
+                <input type="radio" name="pergunta1" value="incorreta" />
+                <span>C)  </span>
+
+                <br /><br>
+            </div>
+
+            <div class="resposta">
+                <input type="radio" name="pergunta1" value="correta" />
+                <span>D) </span>
+
+                <br /><br><br>
+            </div>
+        </form>
+
+        <div class="title">
+            <h1 class="text-sm-left ss9" style="font-size: 20px;">
+                10. 
+
+            </h1><br>
+        </div>
+        <form class="pergunta">
+            <div class="resposta">
+                <input type="radio" name="pergunta1" value="incorreta" />
+                <span>A) </span>
+
+                <br /><br>
+            </div>
+            <div class="resposta">
+                <input type="radio" name="pergunta1" value="correta" />
+                <span>B) </span>
+
+                <br /><br>
+            </div>
+            <div class="resposta">
+                <input type="radio" name="pergunta1" value="incorreta" />
+                <span>C) </span>
+
+                <br /><br>
+            </div>
+
+
+            <div class="resposta">
+                <input type="radio" name="pergunta1" value="incorreta" />
+                <span>D) </span>
+
+                <br /><br><br>
+            </div>
+        </form>
+
+
+        <div class="title">
+            <h1 class="text-sm-left ss10" style="font-size: 20px;">
+                11. 
+                <br><br>
+
+        </div>
+        <form class="pergunta">
+            <div class="resposta">
+                <input type="radio" name="pergunta1" value="incorreta" />
+                <span>A) </span>
+
+                <br /><br>
+            </div>
+            <div class="resposta">
+                <input type="radio" name="pergunta1" value="incorreta" />
+                <span>B) </span>
+
+                <br /><br>
+            </div>
+            <div class="resposta">
+                <input type="radio" name="pergunta1" value="correta" />
+                <span>C) </span>
+
+                <br><br>
+            </div>
+
+            <div class="resposta">
+                <input type="radio" name="pergunta1" value="incorreta" />
+                <span>D) </span>
+
+                <br /><br><br>
+            </div>
+        </form>
+
+        <div class="title">
+            <h1 class="text-sm-left ss11" style="font-size: 20px;">
+                12. 
+            </h1>    <br>
+        </div>
+        <form class="pergunta">
+            <div class="resposta">
+                <input type="radio" name="pergunta1" value="correta" />
+                <span>A) </span>
+
+                <br />    <br>
+            </div>
+            <div class="resposta">
+                <input type="radio" name="pergunta1" value="incorreta" />
+                <span>B) </span>
+
+                <br />    <br>
+            </div>
+            <div class="resposta">
+                <input type="radio" name="pergunta1" value="incorreta" />
+                <span>C) </span>
+
+                <br>    <br>
+            </div>
+
+            <div class="resposta">
+                <input type="radio" name="pergunta1" value="incorreta" />
+                <span>D) </span>
+
+                <br /><br><br>
+            </div>
+        </form>
+
+        <div class="title">
+            <h1 class="text-sm-left ss12" style="font-size: 20px;">
+                13.  
+            </h1><br>
+        </div>
+        <form class="pergunta">
+
+            <div class="resposta">
+                <input type="radio" name="pergunta1" value="correta" />
+                <span>A) </span>
+
+                <br><br>
+            </div>
+
+            <div class="resposta">
+                <input type="radio" name="pergunta1" value="incorreta" />
+                <span>B) </span>
+
+                <br /><br>
+            </div>
+            <div class="resposta">
+                <input type="radio" name="pergunta1" value="incorreta" />
+                <span>C) </span>
+
+                <br /><br>
+            </div>
+
+            <div class="resposta">
+                <input type="radio" name="pergunta1" value="incorreta" />
+                <span>D) </span>
+
+                <br /><br><br>
+            </div>
+        </form>
+
+        <div class="title">
+            <h1 class="text-sm-left ss13" style="font-size: 20px;">
+                14.  
+            </h1><br>
+        </div>
+        <form class="pergunta">
+            <div class="resposta">
+                <input type="radio" name="pergunta1" value="correta" />
+                <span>A) </span>
+
+                <br /><br>
+            </div>
+            <div class="resposta">
+                <input type="radio" name="pergunta1" value="incorreta" />
+                <span>B) </span>
+
+                <br /><br>
+            </div>
+            <div class="resposta">
+                <input type="radio" name="pergunta1" value="incorreta" />
+                <span>C) </span>
+
+                <br><br>
+            </div>
+
+            <div class="resposta">
+                <input type="radio" name="pergunta1" value="incorreta" />
+                <span>D) </span>
+
+                <br /><br><br>
+            </div>
+        </form>
+
+        <div class="title">
+            <h1 class="text-sm-left ss14" style="font-size: 20px;">
+                15. 
+            </h1><br>
+        </div>
+        <form class="pergunta">
+            <div class="resposta">
+                <input type="radio" name="pergunta1" value="incorreta" />
+                <span>A) </span>
+
+                <br /><br>
+            </div>
+            <div class="resposta">
+                <input type="radio" name="pergunta1" value="incorreta" />
+                <span>B) </span>
+
+                <br /><br>
+            </div>
+            <div class="resposta">
+                <input type="radio" name="pergunta1" value="correta" />
+                <span>C) </span>
+
+                <br><br>
+            </div>
+
+            <div class="resposta">
+                <input type="radio" name="pergunta1" value="incorreta" />
+                <span>D) </span>
+
+                <br /><br><br>
+            </div>
+        </form>
+
+        <div class="title">
+            <h1 class="text-sm-left ss15" style="font-size: 20px;">
+                16. 
+            </h1><br>
+        </div>
+        <form class="pergunta">
+            <div class="resposta">
+                <input type="radio" name="pergunta1" value="incorreta" />
+                <span>A)  </span>
+
+                <br /><br>
+            </div>
+            <div class="resposta">
+                <input type="radio" name="pergunta1" value="incorreta" />
+                <span>B)  </span>
+
+                <br /><br>
+            </div>
+
+            <div class="resposta">
+                <input type="radio" name="pergunta1" value="incorreta" />
+                <span>C) </span>
+
+                <br /><br>
+
+                <div class="resposta">
+                    <input type="radio" name="pergunta1" value="correta" />
+                    <span>D)  </span>
+
+                    <br><br><br>
+                </div>
+            </div>
+        </form>
+
+        <div class="title">
+            <h1 class="text-sm-left ss16" style="font-size: 20px;">
+                17. 
+            </h1><br>
+        </div>
+        <form class="pergunta">
+            <div class="resposta">
+                <input type="radio" name="pergunta1" value="incorreta" />
+                <span>A) </span>
+
+                <br /><br>
+            </div>
+            <div class="resposta">
+                <input type="radio" name="pergunta1" value="incorreta" />
+                <span>B) </span>
+
+                <br /><br>
+            </div>
+            <div class="resposta">
+                <input type="radio" name="pergunta1" value="correta" />
+                <span>C) </span>
+
+                <br><br>
+            </div>
+
+            <div class="resposta">
+                <input type="radio" name="pergunta1" value="incorreta" />
+                <span>D) </span>
+
+                <br /><br><br>
+            </div>
+        </form>
+
+        <div class="title">
+            <h1 class="text-sm-left ss17" style="font-size: 20px;">
+                18. 
+            </h1><br>
+        </div>
+        <form class="pergunta">
+            <div class="resposta">
+                <input type="radio" name="pergunta1" value="incorreta" />
+                <span>A) </span>
+
+                <br /><br>
+            </div>
+            <div class="resposta">
+                <input type="radio" name="pergunta1" value="correta" />
+                <span>B) </span>
+
+                <br><br>
+            </div>
+
+            <div class="resposta">
+                <input type="radio" name="pergunta1" value="incorreta" />
+                <span>C) </span>
+
+                <br /><br>
+            </div>
+
+            <div class="resposta">
+                <input type="radio" name="pergunta1" value="incorreta" />
+                <span>D) </span>
+
+                <br /><br><br>
+            </div>
+        </form>
+
+        <div class="title">
+            <h1 class="text-sm-left ss18" style="font-size: 20px;">
+                19. </strong>
+            </h1><br>
+        </div>
+        <form class="pergunta">
+            <div class="resposta">
+                <input type="radio" name="pergunta1" value="incorreta" />
+                <span>A) 
+                </span>
+
+                <br /><br>
+            </div>
+            <div class="resposta">
+                <input type="radio" name="pergunta1" value="incorreta" />
+                <span>B) 
+                </span>
+
+                <br /><br>
+            </div>
+
+
+            <div class="resposta">
+                <input type="radio" name="pergunta1" value="incorreta" />
+                <span>C) </span>
+
+                <br /><br>
+            </div>
+
+            <div class="resposta">
+                <input type="radio" name="pergunta1" value="correta" />
+                <span>D) 
+                </span>
+
+                <br><br><br>
+            </div>
+        </form>
+
+        <div class="title">
+            <h1 class="text-sm-left ss19" style="font-size: 20px;">
+                20. 
+            </h1><br><br>
+
+        </div>
+        <form class="pergunta">
+            <div class="resposta">
+
+                <input type="radio" name="pergunta1" value="correta" />
+                <span>A) </span>
+                <br /><br>
+            </div>
+            <div class="resposta">
+                <input type="radio" name="pergunta1" value="incorreta" />
+                <span>B) </span><br>
+
+                <br />
+            </div>
+            <div class="resposta">
+                <input type="radio" name="pergunta1" value="incorreta" />
+                <span>C) </span>
+
+                <br><br>
+            </div>
+
+            <div class="resposta">
+                <input type="radio" name="pergunta1" value="incorreta" required />
+                <span>D) 
+                </span>
+
+                <br /><br> <br /><br> <br /><br>
+            </div>
+        </form>
+
+        <div class="form-row text-center">
+            <div class="col-12">
+                <a href="index.html"><button type="submit"  class="btn btn-danger" onclick="desistir()">DESISTIR</button></a>
+                <button type="submit" class="btn btn-danger">ENVIAR</button>
+                <button type="submit" class="btn btn-danger" value="Imprimir" onclick="window.print()">IMPRIMIR PROVA</button>
+                <br><br>
+            </div>
+        </div>
+
+        <script>
+            function desistir(){
+  alert("Que pena... Você Desistiu :-(");
+}
+        </script>
+
+        <script src="jogo.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"
+            integrity="sha384-IQsoLXl5PILFhosVNubq5LC7Qb9DXgDA9i+tQ8Zj3iwWAwPtgFTxbJ8NT4GN1R8p"
+            crossorigin="anonymous"></script>
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.min.js"
+            integrity="sha384-cVKIPhGWiC2Al4u+LWgxfKTRIcfu0JTxR+EQDz/bgldoEyl4H0zUF0QKbrJ0EcQF"
+            crossorigin="anonymous"></script>
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+            integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+            crossorigin="anonymous"></script>
+        <script src="estilo-letra.js"></script>
+
+    </div>
+</body>
+
+</html>

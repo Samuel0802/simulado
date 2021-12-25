@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content=" JOGO Pergunta & Resposta">
+    <link rel="stylesheet" type="text/css" href="style.css">
+    <link rel="apple-touch-icon" sizes="180x180" href="https://jornaldoempreendedor.com.br/wp-content/uploads/2014/04/perguntas.jpg">
+    <link rel="icon" type="image/png" sizes="32x32" href="https://jornaldoempreendedor.com.br/wp-content/uploads/2014/04/perguntas.jpg">
+    <link rel="icon" type="image/png" sizes="16x16" href="https://jornaldoempreendedor.com.br/wp-content/uploads/2014/04/perguntas.jpg">
+    <link rel="manifest" href="/site.webmanifest">
+    
+    <title>Pergunta & Resposta</title>
+</head>
+
+<body onload="atualizarDataHora()">
+
+    <!--Primeira Parte do Site-->
+
+    <div class="container">
+    <!--Class Container-->
+
+        <!--Cabeçalho-->
+
+        <div class="hamburguer">
+            <!--Menu de Opções-->
+            <div class="line" id="line1"></div>
+            <div class="line" id="line2"></div>
+            <div class="line" id="line3"></div>
+            <span>Fechar</span>
+        </div>
+
+        <header id="home">
+
+            <div class="img-wrapper">
+                <!--Imagem Background-->
+                <img src="./Imagens/bg.jpg" alt="bg">
+            </div>
+
+            <div class="banner">
+                <!--Banner-->
+                <h1>Pergunta & Resposta</h1>
+                <p>Força esteja com você</p>
+                
+                <p>Prepare-se com questões de Informática</p>
+                <div id="datahora" style="color: white;"></div>
+            </div>
+        </header>
+
+        <aside class="sidebar">
+            <!--Parte do Menu de Opções-->
+            <nav>
+                <ul class="menu">
+                    
+                    <li class="menu-item"><a href="jogo.html" class="menu-link">Infor. nivel médio</a></li>
+                    <li class="menu-item"><a href="programacao.html" class="menu-link">Programação</a></li>
+                    <li class="menu-item"><a href="seguranca.html" class="menu-link">Segurança Cibernética</a></li>
+                    <li class="menu-item"><a href="redes.html" class="menu-link">Redes de Computadores</a></li>
+                </ul>
+            </nav>
+
+            <div class="social-media">
+                <!--Iconis para as redes Sociais-->
+                <a href="https://www.instagram.com/samuelsouza_1/"><i class="fab fa-instagram"></i></a>
+                <a href="https://github.com/Samuel0802"><i class="fab fa-github"></i></a>
+            </div>
+
+        </aside>
+
+     
+<script>
+
+function construirArray(qtdElementos){
+	this.length = qtdElementos
+}
+
+    var	arrayDia = new construirArray(7);
+	arrayDia[0] = "Domingo";
+	arrayDia[1] = "Segunda-Feira";
+	arrayDia[2] = "Terça-Feira";
+	arrayDia[3] = "Quarta-Feira";
+	arrayDia[4] = "Quinta-Feira";
+	arrayDia[5] = "Sexta-Feira";
+	arrayDia[6] = "Sabado";
+
+	var arrayMes = new construirArray(12);
+	arrayMes[0] = "Janeiro";
+	arrayMes[1] = "Fevereiro";
+	arrayMes[2] = "Março";		
+	arrayMes[3] = "Abril";
+	arrayMes[4] = "Maio";
+	arrayMes[5] = "Junho";
+	arrayMes[6] = "Julho";
+	arrayMes[7] = "Agosto";
+	arrayMes[8] = "Setembro";
+	arrayMes[9] = "Outubro";
+	arrayMes[10] = "Novembro";
+	arrayMes[11] = "Dezembro";
+
+   
+	
+
+function mostrarDataHora(hora, diaSemana, dia, mes, ano){
+	retorno  = "&nbsp; "+hora+" ";
+	retorno += "&nbsp;&nbsp;"+diaSemana+", "+dia+" de "+mes+" de "+ano;
+
+    document.getElementById("datahora").innerHTML = retorno;
+}
+
+function getMesExtenso(mes){
+	return this.arrayMes[mes];
+}
+
+
+function getDiaExtenso(dia){
+	return this.arrayDia[dia];
+}
+
+function getDiaExtenso(dia){
+	return this.arrayDia[dia];
+}
+
+function atualizarDataHora(){ 
+    dataAtual = new Date();
+	dia = dataAtual.getDate();
+	diaSemana = getDiaExtenso(dataAtual.getDay());
+	mes = getMesExtenso(dataAtual.getMonth());
+	ano = dataAtual.getFullYear();
+    hora = dataAtual.getHours();
+    minuto = dataAtual.getMinutes();
+    segundo = dataAtual.getSeconds();
+
+    horaImprimivel = hora + ":" + minuto + ":" + segundo;
+	mostrarDataHora(horaImprimivel, diaSemana, dia, mes, ano);
+	setTimeout("atualizarDataHora()",1000);
+} 
+
+</script>
+      
+
+    </div>
+</body>
+
+<!--JavaScript-->
+<script src="script.js"></script>
+
+</html>

@@ -1,0 +1,862 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" type="text/css" href="jogo.css">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="description" content=" JOGO Pergunta & Resposta">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="apple-touch-icon" sizes="180x180"
+        href="https://jornaldoempreendedor.com.br/wp-content/uploads/2014/04/perguntas.jpg">
+    <link rel="icon" type="image/png" sizes="32x32"
+        href="https://jornaldoempreendedor.com.br/wp-content/uploads/2014/04/perguntas.jpg">
+    <link rel="icon" type="image/png" sizes="16x16"
+        href="https://jornaldoempreendedor.com.br/wp-content/uploads/2014/04/perguntas.jpg">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <title>Pergunta & Resposta</title>
+</head>
+<style>
+    body {
+        overflow-x: hidden;
+        background-image: url("Imagens/bg_fundo.jpg") ;
+    }
+
+    .container {
+        width: 100%;
+        height: 800px;
+    }
+
+    span{
+     color: white;
+    }
+    h1{
+     color: white;
+     font-family: 'courier new', Courier,monospace;
+    }
+
+     h1::after {
+    content: '|';
+    opacity: 1;
+    margin-left: 5px;
+    display: inline-block;
+    animation: blink .7s infinite;
+  }
+
+  @keyframes blink {
+    0%, 100% {
+      opacity: 1;
+    }
+    50% {
+      opacity: 0;
+    }
+  }
+#subirTopo {
+			text-decoration: none;
+			bottom: 30px;
+			right: 30px;
+			color: #fff;
+			text-align: center;
+			cursor: pointer;
+			padding: 15px;
+			font-size: 15px;
+			font-weight: bold;
+			text-transform: uppercase;
+			position: fixed;
+			border: 0;
+			font-family: sans-serif;
+			opacity: .8;
+		}
+
+		.img-topo {
+			width: 50px;
+			height: 50px;
+		}
+
+		#subirTopo:hover {
+			opacity: 1;
+		}
+</style>
+
+<body>
+    
+    <div class="container">
+
+        <div class="alert alert-warning alert-dismissible fade show text-center" role="alert">
+            <strong>Olá Amigo(a)!</strong> Você tem 10 minutos pra resolver o simulado.. então Boa Sorte. <br>
+            <strong>Lembrando!!</strong> No final da prova você pode, <strong>Desistir</strong> Ou <strong>Imprimir sua prova</strong>
+            <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+          </div>
+        <div class="stars"></div>
+
+        <div class="title-princi">
+            <br>
+            <h1 class="text-center efeito" style="color: white;">Informática – Nível Médio</h1><br><br><br><br>
+        </div>
+
+        <h1 class="text-center" style="color: white;" id="count-down-timer"></h1>
+
+        <div class="title">
+            <h1 class="text-sm-left ss" style="font-size: 20px;">1. (IBFC - 2018 - Câmara de Feira de Santana/BA - Técnico
+                de
+                Suporte em Informática) - Existem diversos tipos
+                de placas-mãe. As atuais placas-mãe existentes no mercado em 2018 possuem no mínimo:</h1><br>
+        </div>
+
+        <form class="pergunta">
+            <div class="resposta">
+                <input type="radio" name="pergunta1" value="incorreta" required />
+                <span style="color: white;">
+                    A) Três canais de memória DDR2</span>
+
+                <br /><br>
+            </div>
+            <div class="resposta">
+                <input type="radio" name="pergunta1" value="incorreta" />
+                <span style="color: white;">B) Dois canais de memória DDR5</span>
+
+                <br /><br>
+            </div>
+            <div class="resposta">
+                <input type="radio" name="pergunta1" value="correta" />
+                <span>C) Dois canais de memória DDR4</span>
+
+                <br /><br>
+            </div>
+
+            <div class="resposta">
+                <input type="radio" name="pergunta1" value="incorreta" />
+                <span>D) Um canal de memória DDR3</span>
+
+                <br /><br><br>
+            </div>
+        </form>
+
+        <div class="stars"></div>
+        <div class="title">
+            <h1 class="text-sm-left ss1" style="font-size: 20px;">
+                2. (IBFC - 2019 - SESACRE - Agente Administrativo) - A Segurança da Informação (SI) está relacionada com
+                proteção de um conjunto de informações a fim de preservar o valor que possuem para um indivíduo ou uma
+                organização. Sobre as propriedades básicas da segurança da informação, assinale a alternativa correta.
+            </h1><br>
+        </div>
+
+        <form class="pergunta">
+            <div class="resposta">
+                <input type="radio" name="pergunta1" value="incorreta" />
+                <span>A) Rastreabilidade, usabilidade, notoriedade.</span>
+
+                <br /><br>
+            </div>
+            <div class="resposta">
+                <input type="radio" name="pergunta1" value="correta" />
+                <span>B) Confidencialidade, integridade, disponibilidade.</span>
+
+                <br /><br>
+            </div>
+            <div class="resposta">
+                <input type="radio" name="pergunta1" value="incorreta" />
+                <span>C) Integridade, usabilidade, simplicidade.</span>
+
+                <br /><br>
+            </div>
+            <div class="resposta">
+                <input type="radio" name="pergunta1" value="incorreta" />
+                <span>D) Disponibilidade, rastreabilidade, simplicidade.</span>
+
+                <br /><br><br>
+            </div>
+        </form>
+
+        <div class="title">
+            <h1 class="text-sm-left ss2" style="font-size: 20px;">
+                3. (IBFC - 2018 - Câmara de Feira de Santana/BA - Técnico de Suporte em Informática) - Quanto às últimas
+                versões do editor de apresentações da Microsoft e o do LibreOffice, selecione a única alternativa que
+                esteja
+                tecnicamente correta:</h1><br>
+        </div>
+
+        <form class="pergunta">
+            <div class="resposta">
+                <input type="radio" name="pergunta1" value="incorreta" />
+                <span>A) O MS-PowerPoint tem a extensão padrão .pptx e o editor de apresentações do LibreOffice é
+                    denominado
+                    Draw</span>
+
+                <br /><br>
+            </div>
+            <div class="resposta">
+                <input type="radio" name="pergunta1" value="incorreta" />
+                <span>B) O MS-PowerPoint tem a extensão padrão .mppx e o editor de apresentações do LibreOffice é
+                    denominado
+                    Impress</span>
+
+                <br /><br>
+            </div>
+            <div class="resposta">
+                <input type="radio" name="pergunta1" id="ib" value="correta" />
+                <span>C) O MS-PowerPoint tem a extensão padrão .pptx e o editor de apresentações do LibreOffice é
+                    denominado
+                    Impress</span>
+
+                <br /><br>
+            </div>
+
+            <div class="resposta">
+                <input type="radio" name="pergunta1" value="incorreta" />
+                <span>D) O MS-PowerPoint tem a extensão padrão .mppx e o editor de apresentações do LibreOffice é
+                    denominado
+                    Draw</span>
+
+                <br /><br><br>
+            </div>
+        </form>
+
+        <div class="title">
+            <h1 class="text-sm-left ss3 " style="font-size: 20px;">
+                4. A Internet baseia-se no protocolo TCP/IP em que o endereço IP pode ser designado de maneira fixa ou
+                variável.
+                O responsável por designar endereços IP variáveis que possibilitam a navegação na Web é o servidor de..
+            </h1><br>
+        </div>
+
+        <form class="pergunta">
+            <div class="resposta">
+                <input type="radio" name="pergunta1" value="incorreta" />
+                <span>A) HTTP</span>
+
+                <br /><br>
+            </div>
+            <div class="resposta">
+                <input type="radio" name="pergunta1" value="incorreta" />
+                <span>B) PHP</span>
+
+                <br /><br>
+            </div>
+            <div class="resposta">
+                <input type="radio" name="pergunta1" value="incorreta" />
+                <span>C) DNS</span>
+
+                <br /><br>
+            </div>
+
+            <div class="resposta">
+                <input type="radio" name="pergunta1" value="correta" />
+                <span>D) DHCP</span>
+
+                <br /><br><br>
+            </div>
+        </form>
+
+        <div class="title">
+            <h1 class="text-sm-left ss4" style="font-size: 20px;">
+
+                5. (FUNDATEC - 2018 - Pref. Monte Belo do Sul/RS - Técnico de Informática) - A escassez de endereços
+                IPv4 fez
+                com que um novo protocolo fosse criado, o IPv6. Enquanto no IPv4 o tamanho do endereço era 32 bits, no
+                IPv6
+                o tamanho do endereço é de:</h1><br>
+        </div>
+
+        <form class="pergunta">
+            <div class="resposta">
+                <input type="radio" name="pergunta1" value="incorreta" />
+                <span>A) 16 bytes.</span>
+
+                <br /><br>
+            </div>
+            <div class="resposta">
+                <input type="radio" name="pergunta1" value="incorreta" />
+                <span>B) 24 bytes.</span>
+
+                <br /><br>
+            </div>
+            <div class="resposta">
+                <input type="radio" name="pergunta1" value="correta" />
+                <span>C) 32 bytes.</span>
+
+                <br /><br>
+            </div>
+
+            <div class="resposta">
+                <input type="radio" name="pergunta1" value="incorreta" />
+                <span>D) 64 bits.</span><br>
+
+                <br /><br>
+            </div>
+        </form>
+
+
+        <div class="title">
+            <h1 class="text-sm-left ss5" style="font-size: 20px;">
+                6. Qual a definição correta da sigla SID, dentro de um ambiente de banco de dados Oracle?
+            </h1><br>
+        </div>
+
+        <form class="pergunta">
+
+            <div class="resposta">
+                <input type="radio" name="pergunta1" value="correta" />
+                <span>A) Nome que define uma instância específica de um banco de dados.</span>
+
+                <br /><br>
+            </div>
+
+            <div class="resposta">
+                <input type="radio" name="pergunta1" value="incorreta" />
+                <span>B) Seção do arquivo listener.ora que define os bancos de dados servidos por um determinado
+                    listener.</span>
+
+                <br /><br>
+            </div>
+            <div class="resposta">
+                <input type="radio" name="pergunta1" value="incorreta" />
+                <span>C) Nome que define a instância padrão a ser usada nas conexões de banco de dados.</span>
+
+                <br /><br>
+            </div>
+            <div class="resposta">
+                <input type="radio" name="pergunta1" value="incorreta" />
+                <span>D) Seção do arquivo sqlnet.ora que define a instância a ser usada nas conexões de banco de
+                    dados.</span>
+
+                <br /><br><br>
+            </div>
+
+            
+        </form>
+
+        <div class="title">
+            <h1 class="text-sm-left ss6" style="font-size: 20px;">
+
+                7. (UFMT - 2018 - Pref. Várzea Grande/MT - Técnico de Informática) - Assinale a alternativa que NÃO
+                apresenta um tipo de código malicioso.
+            </h1><br>
+        </div>
+        <form class="pergunta">
+            <div class="resposta">
+                <input type="radio" name="pergunta1" value="incorreta" />
+                <span>A) Vírus</span>
+
+                <br /><br>
+            </div>
+            <div class="resposta">
+                <input type="radio" name="pergunta1" value="correta" />
+                <span>B) Firewall</span>
+
+                <br /><br>
+            </div>
+            <div class="resposta">
+                <input type="radio" name="pergunta1" value="incorreta" />
+                <span>C) Botnet</span>
+
+                <br /><br>
+            </div>
+
+            <div class="resposta">
+                <input type="radio" name="pergunta1" value="incorreta" />
+                <span>D) Worm</span><br>
+
+                <br /><br><br>
+            </div>
+        </form>
+
+        <div class="title">
+            <h1 class="text-sm-left ss7" style="font-size: 20px;">
+                8. (FUNDELTA - 2012 - Prefeitura de São Lourenço do Piauí/PI - Digitador) - O que acontece quando um usuário abre um documento do Word, pressiona as teclas CTRL + T e em seguida a tecla F1?
+            </h1><br>
+        </div>
+        <form class="pergunta">
+            <div class="resposta">
+                <input type="radio" name="pergunta1" value="incorreta" />
+                <span>A) A janela para salvar o documento será exibida.</span>
+
+                <br /><br>
+            </div>
+           
+            <div class="resposta">
+                <input type="radio" name="pergunta1" value="incorreta" />
+                <span>B) Será iniciada uma lista com marcadores.</span>
+
+                <br /><br>
+            </div>
+            <div class="resposta">
+                <input type="radio" name="pergunta1" value="correta" />
+                <span>C) A tela de ajuda do Word será exibida.</span>
+
+                <br /><br>
+            </div>
+            <div class="resposta">
+                <input type="radio" name="pergunta1" value="incorreta" />
+                <span>D) O texto será todo apagado.</span>
+
+                <br /><br><br>
+            </div>
+        </form>
+
+        <div class="title">
+            <h1 class="text-sm-left ss8" style="font-size: 20px;">
+              9. (UERR - 2018 - CODESAIMA - Assistente de Informática) - Assinale a alternativa correta, indicando entre as memórias abaixo aquela que não é volátil.
+            </h1><br>
+        </div>
+        <form class="pergunta">
+            <div class="resposta">
+                <input type="radio" name="pergunta1" value="incorreta" />
+                <span>A) RAM.</span>
+
+                <br /><br>
+            </div>
+            <div class="resposta">
+                <input type="radio" name="pergunta1" value="incorreta" />
+                <span>B) Memória cache L1.</span>
+
+                <br /><br>
+            </div>
+            <div class="resposta">
+                <input type="radio" name="pergunta1" value="incorreta" />
+                <span>D) Registradores.</span>
+
+                <br /><br>
+            </div>
+
+            <div class="resposta">
+                <input type="radio" name="pergunta1" value="correta" />
+                <span>D) Fita DAT.</span>
+
+                <br /><br><br>
+            </div>
+        </form>
+
+        <div class="title" >
+            <h1 class="text-sm-left ss9"  style="font-size: 20px;">
+           10. 
+           (NUBES - 2015 - Prefeitura de Major Vieira/SC - Agente de defesa civil) - No Microsoft Word, versão 2007, padrão Português Brasil, configuração original, qual a sequência de teclas devo utilizar para uma “Quebra de Texto”?
+            </h1><br>
+        </div>
+        <form class="pergunta">
+            <div class="resposta">
+                <input type="radio" name="pergunta1" value="incorreta" />
+                <span>A) Alt + Q</span>
+
+                <br /><br>
+            </div>
+            <div class="resposta">
+                <input type="radio" name="pergunta1" value="correta" />
+                <span>B) Crtl + Enter</span>
+
+                <br /><br>
+            </div>
+            <div class="resposta">
+                <input type="radio" name="pergunta1" value="incorreta" />
+                <span>C) Crtl + Q</span>
+
+                <br /><br>
+            </div>
+            
+
+            <div class="resposta">
+                <input type="radio" name="pergunta1" value="incorreta" />
+                <span>D) Alt + T</span>
+
+                <br /><br><br>
+            </div>
+        </form>
+
+
+        <div class="title">
+            <h1 class="text-sm-left ss10" style="font-size: 20px;">
+             11. Considere que os aplicativos devem ser reputados sempre na originalidade da versão referenciada e não quaisquer outras passíveis de modificação (customização, parametrização, etc.) feita pelo usuário. Quando não explicitados nas questões, as versões dos aplicativos são: Windows XP edição doméstica (Português), Microsoft Office 2000, SGBD MS-SQL Server 2000 e navegador Internet Explorer 8. Mouse padrão destro.
+            </h1><br><br>
+            <h1 class="text-sm-left" style="font-size: 20px;">O protocolo TCP está na mesma camada do..  </h1><br>
+        </div>
+        <form class="pergunta">
+            <div class="resposta">
+                <input type="radio" name="pergunta1" value="incorreta" />
+                <span>A) SMTP</span>
+
+                <br /><br>
+            </div>
+            <div class="resposta">
+                <input type="radio" name="pergunta1" value="incorreta" />
+                <span>B)IP</span>
+
+                <br /><br>
+            </div>
+            <div class="resposta">
+                <input type="radio" name="pergunta1" value="correta" />
+                <span>C) UDP</span>
+
+                <br><br>
+            </div>
+
+            <div class="resposta">
+                <input type="radio" name="pergunta1" value="incorreta" />
+                <span>D) FTP</span>
+
+                <br /><br><br>
+            </div>
+        </form>
+
+        <div class="title">
+            <h1 class="text-sm-left ss11" style="font-size: 20px;">
+             12. A linguagem HTML, para produzir páginas na Web, tratase de uma linguagem do tipo 
+            </h1><br>
+        </div>
+        <form class="pergunta">
+            <div class="resposta">
+                <input type="radio" name="pergunta1" value="correta" />
+                <span>A) De marcação</span>
+
+                <br /><br>
+            </div>
+            <div class="resposta">
+                <input type="radio" name="pergunta1" value="incorreta" />
+                <span>B) De script</span>
+
+                <br /><br>
+            </div>
+            <div class="resposta">
+                <input type="radio" name="pergunta1" value="incorreta" />
+                <span>C) Orientada ao objeto</span>
+
+                <br><br>
+            </div>
+
+            <div class="resposta">
+                <input type="radio" name="pergunta1" value="incorreta" />
+                <span>D) linguagem de programação</span>
+
+                <br /><br><br>
+            </div>
+        </form>
+
+        <div class="title">
+            <h1 class="text-sm-left ss12" style="font-size: 20px;">
+             13. A zona obscura na Internet, inacessível através dos mecanismos mais populares de busca como o Google e o Bing é denominada 
+            </h1><br>
+        </div>
+        <form class="pergunta">
+
+            <div class="resposta">
+                <input type="radio" name="pergunta1" value="correta" />
+                <span>A) Deep web.</span>
+
+                <br><br>
+            </div>
+
+            <div class="resposta">
+                <input type="radio" name="pergunta1" value="incorreta" />
+                <span>B) Gray web.</span>
+
+                <br /><br>
+            </div>
+            <div class="resposta">
+                <input type="radio" name="pergunta1" value="incorreta" />
+                <span>C) Surface Web.</span>
+
+                <br /><br>
+            </div>
+            
+            <div class="resposta">
+                <input type="radio" name="pergunta1" value="incorreta" />
+                <span>D) Navegação anônima.</span>
+
+                <br /><br><br>
+            </div>
+        </form>
+
+        <div class="title">
+            <h1 class="text-sm-left ss13" style="font-size: 20px;">
+             14. A internet é uma rede de computadores interligados, que utilizam um conjunto de protocolos.
+
+             Assinale a alternativa que apresenta a ação de enviar dados e / ou arquivos de um computador local para um computador ou servidor remoto. 
+            </h1><br>
+        </div>
+        <form class="pergunta">
+            <div class="resposta">
+                <input type="radio" name="pergunta1" value="correta" />
+                <span>A) Upload
+                </span>
+
+                <br /><br>
+            </div>
+            <div class="resposta">
+                <input type="radio" name="pergunta1" value="incorreta" />
+                <span>B) FTP</span>
+
+                <br /><br>
+            </div>
+            <div class="resposta">
+                <input type="radio" name="pergunta1" value="incorreta" />
+                <span>C) E-mail</span>
+
+                <br><br>
+            </div>
+
+            <div class="resposta">
+                <input type="radio" name="pergunta1" value="incorreta" />
+                <span>D) Download</span>
+
+                <br /><br><br>
+            </div>
+        </form>
+
+        <div class="title">
+            <h1 class="text-sm-left ss14" style="font-size: 20px;">
+             15.  Marcos precisa ativar rapidamente o Bluetooth de seu computador por meio do Windows 10.
+             Na tela de configurações, Marcos deve abrir a configuração de:  
+            </h1><br>
+        </div>
+        <form class="pergunta">
+            <div class="resposta">
+                <input type="radio" name="pergunta1" value="incorreta" />
+                <span>A) Aplicativos</span>
+
+                <br /><br>
+            </div>
+            <div class="resposta">
+                <input type="radio" name="pergunta1" value="incorreta" />
+                <span>B) Personalização</span>
+
+                <br /><br>
+            </div>
+            <div class="resposta">
+                <input type="radio" name="pergunta1" value="correta" />
+                <span>C) Dispositivos</span>
+
+                <br><br>
+            </div>
+
+            <div class="resposta">
+                <input type="radio" name="pergunta1" value="incorreta" />
+                <span>D) Redes e Internet</span>
+
+                <br /><br><br>
+            </div>
+        </form>
+
+        <div class="title">
+            <h1 class="text-sm-left ss15" style="font-size: 20px;">
+             16. Carlos renovou uma foto em sua página na Internet, mas o Google Chrome continua mostrando a imagem anterior quando essa página é aberta.
+             Para evitar que a versão de alguma página seja exibida numa versão ultrapassada, Carlos deve abrir as configurações do Chrome e “limpar”:  
+            </h1><br>
+        </div>
+        <form class="pergunta">
+            <div class="resposta">
+                <input type="radio" name="pergunta1" value="incorreta" />
+                <span>A) As configurações do site; </span>
+
+                <br /><br>
+            </div>
+            <div class="resposta">
+                <input type="radio" name="pergunta1" value="incorreta" />
+                <span>B) o histórico de navegação</span>
+
+                <br /><br>
+            </div>
+
+            <div class="resposta">
+                <input type="radio" name="pergunta1" value="incorreta" />
+                <span>C) Os dados de navegação</span>
+
+                <br /><br>
+                
+                <div class="resposta">
+                    <input type="radio" name="pergunta1" value="correta" />
+                    <span>D) O cache</span>
+    
+                    <br><br><br>
+                </div>
+            </div>
+        </form>
+
+        <div class="title">
+            <h1 class="text-sm-left ss16" style="font-size: 20px;">
+             17. (CONSCAM - 2018 - Pref. Taiaçu/SP - Monitor de Informática) - O servidor DNS é dividido em 2 (dois), assinale a alternativa abaixo que indica corretamente essa divisão.  
+            </h1><br>
+        </div>
+        <form class="pergunta">
+            <div class="resposta">
+                <input type="radio" name="pergunta1" value="incorreta" />
+                <span>A) DNS Master e DNS Slave.</span>
+
+                <br /><br>
+            </div>
+            <div class="resposta">
+                <input type="radio" name="pergunta1" value="incorreta" />
+                <span>B) DNS Interno e DNS Externo.</span>
+
+                <br /><br>
+            </div>
+            <div class="resposta">
+                <input type="radio" name="pergunta1" value="correta" />
+                <span>C) DNS Primário e DNS Secundário.</span>
+
+                <br><br>
+            </div>
+
+            <div class="resposta">
+                <input type="radio" name="pergunta1" value="incorreta" />
+                <span>D) DNS Ativo e DNS Passivo</span>
+
+                <br /><br><br>
+            </div>
+        </form>
+
+        <div class="title">
+            <h1 class="text-sm-left ss17" style="font-size: 20px;">
+             18. O computador é uma máquina capaz de realizar rapidamente o processamento de grandes quantidades de dados. Esse processamento consiste em operações lógicas e aritméticas sobre dados. Além dessa função, existe a função de entrada de dados e saída de dados, cujos principais dispositivos são, respectivamente, 
+            </h1><br>
+        </div>
+        <form class="pergunta">
+            <div class="resposta">
+                <input type="radio" name="pergunta1" value="incorreta" />
+                <span>A) monitor e impressora</span>
+
+                <br /><br>
+            </div>
+            <div class="resposta">
+                <input type="radio" name="pergunta1" value="correta" />
+                <span>B) teclado e monitor</span>
+
+                <br><br>
+            </div>
+
+            <div class="resposta">
+                <input type="radio" name="pergunta1" value="incorreta" />
+                <span>C) mouse e teclado</span>
+
+                <br /><br>
+            </div>
+            
+            <div class="resposta">
+                <input type="radio" name="pergunta1" value="incorreta" />
+                <span>D) mouse e caixa de som</span>
+
+                <br /><br><br>
+            </div>
+        </form>
+
+        <div class="title">
+            <h1 class="text-sm-left ss18" style="font-size: 20px;">
+             19. (QUADRIX - 2016 - CRMV/MT - Agente de fiscalização) - Em uma configuração padrão, qual o tamanho da memória virtual configurada pelo sistema operacional Windows 8? 
+            </h1><br>
+        </div>
+        <form class="pergunta">
+            <div class="resposta">
+                <input type="radio" name="pergunta1" value="incorreta" />
+                <span>A) 1 gigabyte.</span>
+
+                <br /><br>
+            </div>
+            <div class="resposta">
+                <input type="radio" name="pergunta1" value="incorreta" />
+                <span>B) 2 gigabytes.</span>
+
+                <br /><br>
+            </div>
+          
+
+            <div class="resposta">
+                <input type="radio" name="pergunta1" value="incorreta" />
+                <span>C) 2 vezes o tamanho da memória principal.</span>
+
+                <br /><br>
+            </div>
+
+            <div class="resposta">
+                <input type="radio" name="pergunta1" value="correta" />
+                <span>D) O mesmo tamanho da memória principal</span>
+
+                <br><br><br>
+            </div>
+        </form>
+
+        <div class="title">
+            <h1 class="text-sm-left ss19" style="font-size: 20px;">
+             20. 
+             (UERR - 2018 - CODESAIMA - Assistente de Informática) - Assinale a Alternativa incorreta sobre Intranet. 
+            </h1><br>
+        </div>
+        <form class="pergunta">
+            <div class="resposta">
+               
+                <input type="radio" name="pergunta1" value="correta" />
+                <span>A) É uma rede de acesso público que pertence a uma única empresa.</span>
+                <br /><br>
+            </div>
+            <div class="resposta">
+                <input type="radio" name="pergunta1" value="incorreta" />
+                <span>B) É possível realizar a interconexão de duas Intranets distintas através da Internet.</span>
+
+                <br /><br>
+            </div>
+            <div class="resposta">
+                <input type="radio" name="pergunta1" value="incorreta" />
+                <span>C) É uma rede privada que utiliza as mesmas tecnologias da Internet.</span>
+
+                <br><br>
+            </div>
+
+            <div class="resposta">
+                <input type="radio" name="pergunta1" value="incorreta" required/>
+                <span>D) Na intranet é possível ter acesso a WEBMAIL, CHAT e outros serviços oferecidos na Internet.</span>
+
+                <br /><br> <br /><br> <br /><br>
+            </div>
+        </form>
+        <a id="subirTopo">
+            <img class="img-topo" src="https://www.primeprevidencia.com.br/wa_images/seta-branca-cima.gif?v=1g7r4fu">
+            
+        </a>
+         
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.10.1/jquery.min.js"></script>
+	<script type="text/javascript">
+		jQuery(document).ready(function() {
+
+			jQuery("#subirTopo").hide();
+
+			jQuery('a#subirTopo').click(function() {
+				jQuery('body,html').animate({
+					scrollTop: 0
+				}, 800);
+				return false;
+			});
+
+			jQuery(window).scroll(function() {
+				if (jQuery(this).scrollTop() > 1000) {
+					jQuery('#subirTopo').fadeIn();
+				} else {
+					jQuery('#subirTopo').fadeOut();
+				}
+			});
+		});
+	</script>
+        <div class="form-row text-center">
+            <div class="col-12">
+               <a href="index.html"><button type="submit"   class="btn btn-danger" onclick="desistir()">DESISTIR</button></a>
+                <button type="submit"  class="btn btn-danger">ENVIAR</button>
+                <button type="submit" class="btn btn-danger" value="Imprimir" onclick="window.print()">IMPRIMIR PROVA</button>
+            <br><br>
+            </div>
+         </div>
+
+       
+
+        <script src="jogo.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"
+            integrity="sha384-IQsoLXl5PILFhosVNubq5LC7Qb9DXgDA9i+tQ8Zj3iwWAwPtgFTxbJ8NT4GN1R8p"
+            crossorigin="anonymous"></script>
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.min.js"
+            integrity="sha384-cVKIPhGWiC2Al4u+LWgxfKTRIcfu0JTxR+EQDz/bgldoEyl4H0zUF0QKbrJ0EcQF"
+            crossorigin="anonymous"></script>
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+            integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+            crossorigin="anonymous"></script>
+            <script src="estilo-letra.js"></script>
+
+    </div>
+</body>
+
+</html>
